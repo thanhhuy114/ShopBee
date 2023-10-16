@@ -4,25 +4,39 @@ void main() {
   runApp(MaterialApp(
     home: SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Profile"),
-          centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () {
-                // Xử lý khi nhấn
-              },
-            )
-          ],
-          backgroundColor: const Color.fromRGBO(254, 161, 124, 1),
-          leading: IconButton(
-            onPressed: () {
-              // Xử lý khi nhấn
-            },
-            icon: const Icon(Icons.menu),
+        drawer: Drawer( 
+          child: ListView( 
+            children: const <Widget>[ 
+              DrawerHeader( 
+                decoration: BoxDecoration( 
+                  color: Colors.green, 
+                ), 
+                child: Text('Menu', style: TextStyle( color: Colors.green, fontSize: 24, ),   ), 
+              ), 
+              ListTile( 
+                title: Text('Item 1'), 
+              ), 
+              ListTile( 
+                title: Text('Item 2'), 
+              ), 
+            ], 
           ),
         ),
+
+
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: const Color.fromRGBO(254, 161, 124, 1),
+          actions: const <Widget>[
+            
+            Padding(
+              padding: EdgeInsets.only(right: 10.0),
+              child: Icon(Icons.settings),
+            )
+          ],
+        ),
+
+
         body: Column(children: [
           Row(
             children: [
@@ -41,12 +55,13 @@ void main() {
                   )
                 ],
               ),
-              Column(
+              const Column(
 
               )
             ],
           )
         ]),
+
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
           fixedColor:const  Color.fromRGBO(254, 161, 124, 1),
@@ -54,6 +69,10 @@ void main() {
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopify_outlined),
+              label: "Shop",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notifications),
