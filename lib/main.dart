@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:testa/theme_Personal_Info/profile.dart';
 
-import 'info/statitics.dart';
+import 'theme_Personal_Info/statitics.dart';
 
 void main() {
   runApp(const MyApp());
@@ -95,123 +96,10 @@ class MyApp extends StatelessWidget {
           ),
 
           body: Column(
-            children: [
+            children: const [
               //Sử lý hình ảnh và thông tin
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25.0),
-                    border: Border.all(
-                        color: const Color.fromRGBO(254, 161, 124, 1.0),
-                        width: 3.0),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: [
-                        ClipOval(
-                          child: Image.asset(
-                            "assets/img/avatar.png",
-                            width: 110.0,
-                            height: 110.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.only(left: 25.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Tên: Lê Văn C',
-                                  style: TextStyle(
-                                      fontSize: 17.0, color: Colors.black),
-                                ),
-                                Text(
-                                  'Ngày Sinh: 01/01/2003',
-                                  style: TextStyle(
-                                      fontSize: 17.0, color: Colors.black),
-                                ),
-                                Text(
-                                  'SĐT: 0333333333',
-                                  style: TextStyle(
-                                      fontSize: 17.0, color: Colors.black),
-                                ),
-                                Text(
-                                  'Email: abc@gmail.com',
-                                  style: TextStyle(
-                                      fontSize: 17.0, color: Colors.black),
-                                ),
-                                Text(
-                                  'Địa Chỉ: TP Hồ Chí Minh',
-                                  style: TextStyle(
-                                      fontSize: 17.0, color: Colors.black),
-                                ),
-                              ],
-                            ))
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-
-              const StatisticsWidget(),
-
-              Container(
-                height: 60.0,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        SizedBox(height: 4.0),
-                      ],
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(Icons.attach_money, color: Colors.white),
-                        const SizedBox(height: 4.0),
-                        Text(
-                          'Số tiền: \$${100.toStringAsFixed(2)}',
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Icon(Icons.monetization_on, color: Colors.white),
-                        SizedBox(height: 4.0),
-                        Text(
-                          'Số xu: 100',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-
-              //Sử lý phần thống kê
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Row(
-                  children: [
-                    Column(
-                      children: const [Icon(Icons.bedtime_off_rounded)],
-                    ),
-                    Column(),
-                    Column(),
-                  ],
-                ),
-              )
+              PersonalWidget(),
+              StatisticsWidget(),
             ],
           ),
         ),
