@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testa/orders_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Demo Material App'),
           ),
-          body: const Center(child: Text("Material App"))),
+          body: Center(
+              child: Column(
+            children: const <Widget>[Text("Infor"), OrderList()],
+          ))),
       darkTheme: ThemeData(primaryColor: Colors.grey),
       color: Colors.amberAccent,
       supportedLocales: {const Locale('en', ' ')},
