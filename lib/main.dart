@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testa/theme_Personal_Info/profile.dart';
-
+import 'theme_Personal_Info/orders_list.dart';
 import 'theme_Personal_Info/statitics.dart';
 
 void main() {
@@ -97,9 +97,10 @@ class MyApp extends StatelessWidget {
 
           body: Column(
             children: const [
-              //Sử lý hình ảnh và thông tin
-              PersonalWidget(),
+              //Sử lý thông tin
+              ProfileWidget(),
               StatisticsWidget(),
+              OrderList(),
             ],
           ),
         ),
