@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:testa/main.dart';
 
 import 'order.dart';
 
-class OrderList extends StatelessWidget {
-  const OrderList({super.key});
+class OrderWidget extends StatelessWidget {
+  const OrderWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         color: Colors.transparent,
       ),
-      padding: const EdgeInsets.only(left: 10, right: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10, top: 8),
       child: Column(children: <Widget>[
-        Row(
-          children: const [
-            Text(
-              "Orders",
-              style: TextStyle(fontSize: 15),
-            )
-          ],
-        ),
+        // Row(
+        //   children: const [
+        //     Expanded(
+        //       child: Text(
+        //         "Thông tin đơn hàng",
+        //         textAlign: TextAlign.center,
+        //         style: TextStyle(
+        //             fontSize: 15,
+        //             color: Color.fromARGB(255, 76, 76, 80),
+        //             fontWeight: FontWeight.bold),
+        //       ),
+        //     )
+        //   ],
+        // ),
         Container(
           decoration: const BoxDecoration(
               border: Border(
@@ -35,37 +42,37 @@ class OrderList extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const <Widget>[
+              Text("Tất cả"),
               Text("Chờ giao"),
               Text(
                 "Hoàn thành",
-                style: TextStyle(color: Colors.orange),
+                style: TextStyle(color: colorTheme),
               ),
               Text("Đã hủy"),
             ],
           ),
         ),
-        const MyWidget()
+        const OrderListWidget()
       ]),
     );
   }
 }
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class OrderListWidget extends StatefulWidget {
+  const OrderListWidget({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<OrderListWidget> createState() => _OrderListWidgetState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
-  List<OrderWidget> items = List.filled(
+class _OrderListWidgetState extends State<OrderListWidget> {
+  List<ProductWidget> items = List.filled(
     15,
-    const OrderWidget(),
+    const ProductWidget(),
   );
   final controller = ScrollController();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     // controller.addListener(() {
     //   if (controller.position.maxScrollExtent == controller.offset) {

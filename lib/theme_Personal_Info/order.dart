@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:testa/main.dart';
 
-class OrderWidget extends StatelessWidget {
-  const OrderWidget({super.key});
+class ProductWidget extends StatelessWidget {
+  const ProductWidget({super.key});
   // final String? orderId = "aaaaaa";
   // final String? status = "aaaaaa";
   // final int totalItem = 3;
@@ -23,7 +24,7 @@ class OrderWidget extends StatelessWidget {
               Text("Mã hóa đơn: ABDHADA311D"),
               Text(
                 "Hoàn thành",
-                style: TextStyle(color: Colors.orange),
+                style: TextStyle(color: colorTheme),
               )
             ],
           ),

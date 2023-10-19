@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:testa/theme_Personal_Info/profile.dart';
+import 'menu.dart';
 import 'theme_Personal_Info/orders_list.dart';
 import 'theme_Personal_Info/statitics.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+const Color colorTheme = Color.fromARGB(255, 253, 96, 50);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,50 +21,15 @@ class MyApp extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           //Menu
-          drawer: Drawer(
-              child: ListView(
-            children: <Widget>[
-              const DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(254, 161, 124, 1.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 15.0, top: 15.0),
-                    child: Text(
-                      'Shop Bee',
-                      style: TextStyle(fontSize: 25.0),
-                    ),
-                  )),
-              ListTile(
-                title: const Text('Hướng dẫn'),
-                leading: const Icon(Icons.book),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Hướng dẫn'),
-                leading: const Icon(Icons.book),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Hướng dẫn'),
-                leading: const Icon(Icons.book),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Đăng Xuất'),
-                leading: const Icon(Icons.logout),
-                onTap: () {},
-              )
-            ],
-          )),
-
+          backgroundColor: Colors.white,
+          drawer: const MenuWidget(),
           //App bar
           appBar: AppBar(
-            backgroundColor: const Color.fromRGBO(254, 161, 124, 1),
+            backgroundColor: colorTheme,
             centerTitle: true,
             title: const Text(
               'Thông Tin Cá Nhân',
-              style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 23.5, fontWeight: FontWeight.bold),
             ),
             actions: const [
               Padding(
@@ -72,7 +40,7 @@ class MyApp extends StatelessWidget {
 
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: 3,
-            fixedColor: const Color.fromRGBO(254, 161, 124, 1),
+            fixedColor: colorTheme,
             items: const [
               BottomNavigationBarItem(
                   icon: Icon(
@@ -100,7 +68,7 @@ class MyApp extends StatelessWidget {
               //Sử lý thông tin
               ProfileWidget(),
               StatisticsWidget(),
-              OrderList(),
+              OrderWidget(),
             ],
           ),
         ),
