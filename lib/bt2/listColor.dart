@@ -1,9 +1,8 @@
-var list = {
+var listLC = [
   Colors.red,
   Colors.amberAccent,
   Colors.amber,
   Colors.black,
-  Colors.accents,
   Colors.black12,
   Colors.black26,
   Colors.black38,
@@ -33,7 +32,6 @@ var list = {
   Colors.orangeAccent,
   Colors.pink,
   Colors.pinkAccent,
-  Colors.primaries,
   Colors.purple,
   Colors.purpleAccent,
   Colors.redAccent,
@@ -103,4 +101,4 @@ var list = {
   Color.fromARGB(255, 26, 67, 87),
   Color.fromARGB(255, 153, 214, 92),
   Color.fromARGB(255, 43, 121, 44),
-};
+  ];
