@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:testa/theme_Personal_Info/profile.dart';
+import 'menu.dart';
+import 'theme_Personal_Info/orders_list.dart';
+import 'theme_Personal_Info/statitics.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+const Color colorTheme = Color.fromARGB(255, 253, 96, 50);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,19 +18,62 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
+      home: SafeArea(
+        child: Scaffold(
+          //Menu
+          backgroundColor: Colors.white,
+          drawer: const MenuWidget(),
+          //App bar
           appBar: AppBar(
-            title: const Text('Demo Material App'),
+            backgroundColor: colorTheme,
+            centerTitle: true,
+            title: const Text(
+              'Thông Tin Cá Nhân',
+              style: TextStyle(fontSize: 23.5, fontWeight: FontWeight.bold),
+            ),
+            actions: const [
+              Padding(
+                  padding: EdgeInsets.only(right: 15.0),
+                  child: Icon(Icons.settings))
+            ],
           ),
-          body: const Center(child: Text("Material App"))),
-      darkTheme: ThemeData(primaryColor: Colors.grey),
-      color: Colors.amberAccent,
-      supportedLocales: {const Locale('en', ' ')},
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: 3,
+            fixedColor: colorTheme,
+            items: const [
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home_outlined,
+                    color: Colors.black,
+                  ),
+                  label: 'Trang Chủ'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.shopping_cart_outlined, color: Colors.black),
+                  label: 'Cửa Hàng'),
+              BottomNavigationBarItem(
+                  icon:
+                      Icon(Icons.notifications_none_sharp, color: Colors.black),
+                  label: 'Thông Báo'),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.person_outline_outlined,
+                  ),
+                  label: 'Cá Nhân')
+            ],
+          ),
+
+          body: Column(
+            children: const [
+              //Sử lý thông tin
+              ProfileWidget(),
+              StatisticsWidget(),
+              OrderWidget(),
+            ],
+          ),
+        ),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
