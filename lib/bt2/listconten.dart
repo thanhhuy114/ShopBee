@@ -12,6 +12,7 @@ class Content extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: Container(
+        height: 150.0,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25.0),
           border: Border.all(color: colorTheme, width: 2.5),
@@ -33,24 +34,21 @@ class Content extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Tiêu đề
+                    //Tiêu đề
                     Text(
                       // ignore: unnecessary_string_interpolations
                       '$tieuDe',
                       style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 35.0,
                         color: Color.fromARGB(255, 101, 101, 110),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    Flexible(
-                      child: Text(
-                        // ignore: unnecessary_string_interpolations
-                        '$tomTat',
-                        style: const TextStyle(
-                          fontSize: 16.0,
-                          color: Color.fromARGB(255, 101, 101, 110),
-                        ),
+                    Text(
+                      // ignore: unnecessary_string_interpolations
+                      '$tomTat',
+                      style: const TextStyle(
+                        fontSize: 20.0,
+                        color: Color.fromARGB(255, 101, 101, 110),
                       ),
                     ),
                   ],

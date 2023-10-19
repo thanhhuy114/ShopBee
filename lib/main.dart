@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testa/bt2/listconten.dart';
+import 'package:testa/bt2/tash2.dart';
 import 'package:testa/theme_Personal_Info/profile.dart';
 import 'menu.dart';
 import 'theme_Personal_Info/orders_list.dart';
@@ -71,14 +73,15 @@ class MyApp extends StatelessWidget {
             ),
           ),
 
-          body: Column(
-            children: const [
-              //Sử lý thông tin
-              ProfileWidget(),
-              StatisticsWidget(),
-              OrderWidget(),
-            ],
-          ),
+          // body: Column(
+          //   children: const [
+          //     //Sử lý thông tin
+          //     ProfileWidget(),
+          //     StatisticsWidget(),
+          //     OrderWidget(),
+          //   ],
+          // ),
+          body: const list_screen(),
         ),
       ),
       debugShowCheckedModeBanner: false,
