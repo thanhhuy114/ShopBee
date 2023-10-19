@@ -13,8 +13,6 @@ const Color colorTheme = Color.fromARGB(255, 253, 96, 50);
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
-
   // This widget is the root of your application.
 
   @override
