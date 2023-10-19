@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testa/theme_Personal_Info/profile.dart';
+import 'bt2/task1.dart';
 import 'menu.dart';
 import 'theme_Personal_Info/orders_list.dart';
 import 'theme_Personal_Info/statitics.dart';
@@ -12,8 +13,6 @@ const Color colorTheme = Color.fromARGB(255, 253, 96, 50);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  
 
   // This widget is the root of your application.
 
@@ -74,9 +73,10 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: const [
               //Sử lý thông tin
-              ProfileWidget(),
-              StatisticsWidget(),
-              OrderWidget(),
+              Task1Widget(
+                rowx: 5,
+                columnx: 4,
+              ),
             ],
           ),
         ),
