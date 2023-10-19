@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:testa/main.dart';
 
-// Quân
-class PersonalInfoWidget extends StatelessWidget {
-  const PersonalInfoWidget({super.key});
+class ProfileWidget extends StatelessWidget {
+  const ProfileWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,7 @@ class PersonalInfoWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25.0),
-          border: Border.all(
-              color: const Color.fromRGBO(254, 161, 124, 1.0), width: 3.0),
+          border: Border.all(color: colorTheme, width: 2.5),
         ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -33,23 +32,33 @@ class PersonalInfoWidget extends StatelessWidget {
                     children: const [
                       Text(
                         'Tên: Lê Văn C',
-                        style: TextStyle(fontSize: 17.0, color: Colors.black),
-                      ),
-                      Text(
-                        'Ngày Sinh: 01/01/2003',
-                        style: TextStyle(fontSize: 17.0, color: Colors.black),
+                        style: TextStyle(
+                            fontSize: 19.0,
+                            color: Color.fromARGB(255, 101, 101, 110)),
                       ),
                       Text(
                         'SĐT: 0333333333',
-                        style: TextStyle(fontSize: 17.0, color: Colors.black),
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Color.fromARGB(255, 101, 101, 110)),
                       ),
                       Text(
                         'Email: abc@gmail.com',
-                        style: TextStyle(fontSize: 17.0, color: Colors.black),
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Color.fromARGB(255, 101, 101, 110)),
                       ),
                       Text(
                         'Địa Chỉ: TP Hồ Chí Minh',
-                        style: TextStyle(fontSize: 17.0, color: Colors.black),
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Color.fromARGB(255, 101, 101, 110)),
+                      ),
+                      Text(
+                        'Ngày Sinh: 01/01/2003',
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Color.fromARGB(255, 101, 101, 110)),
                       ),
                     ],
                   ))
