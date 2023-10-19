@@ -28,7 +28,7 @@ class StatisticsWidget extends StatelessWidget {
                   child: Row(
                     children: [
                       const Icon(Icons.shopping_cart,
-                          size: 38, color: colorTheme),
+                          size: 35, color: colorTheme),
                       Container(
                         padding: const EdgeInsets.only(left: 3),
                         child: Column(
@@ -72,7 +72,7 @@ class StatisticsWidget extends StatelessWidget {
                   child: Row(
                     children: [
                       const Icon(Icons.attach_money,
-                          size: 40, color: colorTheme),
+                          size: 35, color: colorTheme),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
@@ -114,7 +114,7 @@ class StatisticsWidget extends StatelessWidget {
                     // mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Icon(Icons.monetization_on,
-                          size: 40, color: colorTheme),
+                          size: 35, color: colorTheme),
                       Container(
                         padding: const EdgeInsets.only(left: 2),
                         child: Column(
@@ -145,7 +145,7 @@ class StatisticsWidget extends StatelessWidget {
           ),
           Container(
               // color: Colors.white,
-              padding: const EdgeInsets.symmetric(vertical: 7),
+              padding: const EdgeInsets.symmetric(vertical: 3),
               child:
                   const VerticalDivider(thickness: 0.5, color: Colors.white)),
         ],

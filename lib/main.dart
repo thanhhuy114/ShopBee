@@ -13,6 +13,8 @@ const Color colorTheme = Color.fromARGB(255, 253, 96, 50);
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  
+
   // This widget is the root of your application.
 
   @override
@@ -38,29 +40,35 @@ class MyApp extends StatelessWidget {
             ],
           ),
 
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: 3,
-            fixedColor: colorTheme,
-            items: const [
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home_outlined,
-                    color: Colors.black,
-                  ),
-                  label: 'Trang Chủ'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_cart_outlined, color: Colors.black),
-                  label: 'Cửa Hàng'),
-              BottomNavigationBarItem(
-                  icon:
-                      Icon(Icons.notifications_none_sharp, color: Colors.black),
-                  label: 'Thông Báo'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.person_outline_outlined,
-                  ),
-                  label: 'Cá Nhân')
-            ],
+          bottomNavigationBar: DecoratedBox(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(80)),
+            ),
+            child: BottomNavigationBar(
+              currentIndex: 3,
+              fixedColor: colorTheme,
+              items: const [
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.home_outlined,
+                      color: Colors.black,
+                    ),
+                    label: 'Trang Chủ'),
+                BottomNavigationBarItem(
+                    icon:
+                        Icon(Icons.shopping_cart_outlined, color: Colors.black),
+                    label: 'Cửa Hàng'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.notifications_none_sharp,
+                        color: Colors.black),
+                    label: 'Thông Báo'),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.person_outline_outlined,
+                    ),
+                    label: 'Cá Nhân')
+              ],
+            ),
           ),
 
           body: Column(
